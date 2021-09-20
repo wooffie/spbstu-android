@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Layouts Lab</string>
+    <string name="haskell_logo">Haskell logo</string>
+    <string name="haskell_question">Type your question</string>
+    <string name="haskell_button">Hoogle it!</string>
+    <string name="android_logo_button">Android logo</string>
+    <string name="choose_diner">Choose Diner:</string>
+    <string name="mushroom_soup">Mushroom Soup</string>
+    <string name="cutlets_with_mashed_potatoes">Cutlets With Mashed Potatoes</string>
+    <string name="funny_kebab">Funny Kebab</string>
+</resources>
