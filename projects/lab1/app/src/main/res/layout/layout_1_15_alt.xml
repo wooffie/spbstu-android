@@ -34,12 +34,6 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <TextView
-            android:gravity="end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_25"
-            android:text="@string/choose_diner"/>
 
         <RadioButton
             android:textSize="@dimen/sp_11"
