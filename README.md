@@ -2,7 +2,7 @@
 ## _Student: Burkov Egor_
 
 ### List of works
-- [ ] 1. Layouts.
+- [x] 1. Layouts.
 - [ ] 2. Activity Lifecycle. Alternative resources.
 - [ ] 3. Lifecycle components. Navigation in the application. 
 - [ ] 4. RecyclerView.
