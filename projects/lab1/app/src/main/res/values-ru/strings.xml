@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Лабораторная работа</string>
+    <string name="haskell_logo">Логотип Haskell</string>
+    <string name="haskell_question">Напишите интересующий вопрос</string>
+    <string name="haskell_button">Hoogle it!</string>
+    <string name="android_logo_button">Логотип андройда</string>
+    <string name="mushroom_soup">Грибной супчик</string>
+    <string name="cutlets_with_mashed_potatoes">Котлетки с пюрешкой</string>
+    <string name="funny_kebab">Весёлый кебаб</string>
+</resources>
