@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Log Lifecycle</string>
+    <string name="clicktext">Click on buttons</string>
+    <string name="toast_button">Click to Toast</string>
+    <string name="snackbar_butt">CLICK TO SNACKBAR</string>
+    <string name="toast_clicked">Toast clicked!</string>
+    <string name="snackbar_clicked">Snackbar clicked!</string>
+</resources>
