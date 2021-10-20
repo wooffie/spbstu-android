@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Navigation</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_text">\"I always tell the truth. Even when I lie.\"</string>
+    <string name="tony_montana">Tony Montana</string>
+    <string name="this_is_first_fragment">This is first fragment</string>
+    <string name="this_is_second_fragment">This is second fragment</string>
+    <string name="this_is_third_fragment">This is third fragment</string>
+    <string name="go_to_first">Go to first</string>
+    <string name="go_to_second">Go to second</string>
+    <string name="go_to_third">Go to third</string>
+
+    <string name="about">About…</string>
+</resources>
