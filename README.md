@@ -3,7 +3,7 @@
 
 ### List of works
 - [x] 1. Layouts.
-- [ ] 2. Activity Lifecycle. Alternative resources.
+- [x] 2. Activity Lifecycle. Alternative resources.
 - [ ] 3. Lifecycle components. Navigation in the application. 
 - [ ] 4. RecyclerView.
 - [ ] 5. UI Tests. 
