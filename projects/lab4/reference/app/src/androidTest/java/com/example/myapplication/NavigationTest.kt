@@ -1,6 +1,9 @@
 package com.example.myapplication
 
+import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.pressBack
+import androidx.test.espresso.action.ViewActions
+import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Rule
@@ -16,6 +19,11 @@ class NavigationTest {
     @get:Rule
     val mainActivityRule = ActivityScenarioRule(MainActivity::class.java)
 
+    private fun navAppClickUp() {
+        Espresso.onView(ViewMatchers.withContentDescription(R.string.nav_app_bar_navigate_up_description))
+            .perform(ViewActions.click())
+    }
+
     @Test
     fun fromFragment1() {
         // Start of test - on display first Frag
@@ -26,7 +34,7 @@ class NavigationTest {
         assertViewWithId(R.id.activity_about)
 
         // Check pressing back - we should go in Frag1
-        pressBack()
+        navAppClickUp()
         assertViewWithId(R.id.fragment1)
 
         performClickWithId(R.id.bnToSecond) // Nav Frag1 -> Frag2
@@ -42,7 +50,7 @@ class NavigationTest {
 
         openAbout()
         assertViewWithId(R.id.activity_about) // Nav Frag2 -> About
-        pressBack()
+        navAppClickUp()
         assertViewWithId(R.id.fragment2)
 
         performClickWithId(R.id.bnToFirst) // Nav Frag2 -> Frag1
@@ -63,7 +71,7 @@ class NavigationTest {
 
         openAbout()
         assertViewWithId(R.id.activity_about) // Nav Frag3 -> About
-        pressBack()
+        navAppClickUp()
         assertViewWithId(R.id.fragment3)
 
         performClickWithId(R.id.bnToSecond) // Nav Frag3 -> Frag2
