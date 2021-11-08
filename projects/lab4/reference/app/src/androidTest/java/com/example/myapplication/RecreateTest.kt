@@ -16,18 +16,33 @@ class RecreateTest {
     // может быть включить проверку на наличие кнопок на экране после пересоздания,
     // или их отсутсвия в альт ресурсе другой ориентации
 
+    // Почитал телегу и так и не понял, можно оставлять recreate или нет, но пока что уберу
+
+
+    private fun rotateScreen() {
+        mainActivityRule.scenario.onActivity {
+            it.apply {
+                requestedOrientation = (requestedOrientation + 1) % 2
+            }
+        }
+        Thread.sleep(1000)
+    }
+
+
     @Test
     fun fromFragment1() {
         // Start of test - on display first Frag
         assertViewWithId(R.id.fragment1)
-        mainActivityRule.scenario.recreate()
+        //mainActivityRule.scenario.recreate()
+        rotateScreen()
         assertViewWithId(R.id.fragment1)
     }
 
     @Test
     fun fromFragment2_3() {
         performClickWithId(R.id.bnToSecond)
-        mainActivityRule.scenario.recreate()
+        //mainActivityRule.scenario.recreate()
+        rotateScreen()
         assertViewWithId(R.id.fragment2)
         performClickWithId(R.id.bnToThird)
         assertViewWithId(R.id.fragment3)
@@ -36,7 +51,8 @@ class RecreateTest {
     @Test
     fun fromFragment2_1() {
         performClickWithId(R.id.bnToSecond)
-        mainActivityRule.scenario.recreate()
+        // mainActivityRule.scenario.recreate()
+        rotateScreen()
         assertViewWithId(R.id.fragment2)
         performClickWithId(R.id.bnToFirst)
         assertViewWithId(R.id.fragment1)
@@ -46,7 +62,8 @@ class RecreateTest {
     fun fromFragment3_1() {
         performClickWithId(R.id.bnToSecond)
         performClickWithId(R.id.bnToThird)
-        mainActivityRule.scenario.recreate()
+        // mainActivityRule.scenario.recreate()
+        rotateScreen()
         assertViewWithId(R.id.fragment3)
         performClickWithId(R.id.bnToFirst)
         assertViewWithId(R.id.fragment1)
@@ -56,7 +73,8 @@ class RecreateTest {
     fun fromFragment3_2() {
         performClickWithId(R.id.bnToSecond)
         performClickWithId(R.id.bnToThird)
-        mainActivityRule.scenario.recreate()
+        // mainActivityRule.scenario.recreate()
+        rotateScreen()
         assertViewWithId(R.id.fragment3)
         performClickWithId(R.id.bnToSecond)
         assertViewWithId(R.id.fragment2)
