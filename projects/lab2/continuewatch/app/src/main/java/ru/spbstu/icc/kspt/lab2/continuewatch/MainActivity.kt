@@ -21,19 +21,28 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-        override fun onSaveInstanceState(outState: Bundle) {
-            outState.run {
-                Log.d(TAG,"Saving state SEC=$secondsElapsed")
-                putInt(SEC,secondsElapsed)
-            }
-            super.onSaveInstanceState(outState)
+    override fun onStart() {
+        super.onStart()
+        Log.d(TAG, "onStart()")
+        if (GOOD) {
+            visibility = true // GOOD
         }
+
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.run {
+            Log.d(TAG, "Saving state SEC=$secondsElapsed")
+            putInt(SEC, secondsElapsed)
+        }
+        super.onSaveInstanceState(outState)
+    }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         savedInstanceState.run {
             secondsElapsed = getInt(SEC)
-            Log.d(TAG,"Restore state SEC=$secondsElapsed")
+            Log.d(TAG, "Restore state SEC=$secondsElapsed")
         }
     }
 
@@ -47,18 +56,21 @@ class MainActivity : AppCompatActivity() {
     override fun onStop() {
         super.onStop()
         visibility = false
-        Log.d(TAG,"visibility == FALSE")
+        Log.d(TAG, "visibility == FALSE")
 
     }
 
     override fun onResume() {
         super.onResume()
-        visibility = true
-        Log.d(TAG,"visibility == TRUE")
+        if (!GOOD) {
+            visibility = true
+        }
+        Log.d(TAG, "visibility == TRUE")
 
     }
 
-    companion object{
+    companion object {
+        const val GOOD = false
         const val TAG = "ContWatch"
         const val SEC = "secondsElapsed"
     }
