@@ -1,31 +1,33 @@
 package com.wooftown.intentflagsactivityattributes
 
-import android.app.Activity
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import com.wooftown.intentflagsactivityattributes.databinding.ThirdActivityBinding
+import com.wooftown.intentflagsactivityattributes.databinding.Fragment3Binding
 
 
 class ThirdActivity : OptionedActivity() {
 
 
-    private lateinit var binging: ThirdActivityBinding
+    private lateinit var binging: Fragment3Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binging = ThirdActivityBinding.inflate(layoutInflater)
+        binging = Fragment3Binding.inflate(layoutInflater)
         setContentView(binging.root)
-        binging.toFirst.setOnClickListener { toFirst() }
-        binging.toSecond.setOnClickListener { toSecond() }
+        binging.bnToFirst.setOnClickListener { toFirst() }
+        binging.bnToSecond.setOnClickListener { toSecond() }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun toFirst() {
-        val intent = Intent(this, FirstActivity::class.java).addFlags(FLAG_ACTIVITY_CLEAR_TOP)
+        val intent = Intent(this, MainActivity::class.java).addFlags(FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
 

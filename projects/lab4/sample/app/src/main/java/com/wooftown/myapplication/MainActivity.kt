@@ -17,4 +17,5 @@ class MainActivity : AppCompatActivity() {
             binging.btn.setText(R.string.cliked)
         }
     }
+
 }

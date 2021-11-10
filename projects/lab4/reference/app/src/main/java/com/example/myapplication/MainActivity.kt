@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.*
 import com.example.myapplication.databinding.ActivityMainBinding
+
 open class MainActivity : AppCompatActivity() {
 
 
