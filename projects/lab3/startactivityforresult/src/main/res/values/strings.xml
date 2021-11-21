@@ -9,4 +9,5 @@
     <string name="this_is_second_activity">This is second activity</string>
     <string name="go_to_third">Go to third</string>
     <string name="this_is_third_activity">This is third activity</string>
+    <string name="title_about">About</string>
 </resources>

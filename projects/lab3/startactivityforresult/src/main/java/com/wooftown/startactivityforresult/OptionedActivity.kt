@@ -1,12 +1,14 @@
 package com.wooftown.startactivityforresult
 
 import android.content.Intent
+import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 
 abstract class OptionedActivity : AppCompatActivity() {
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
@@ -21,4 +23,6 @@ abstract class OptionedActivity : AppCompatActivity() {
         } else
             super.onOptionsItemSelected(item)
     }
+
+
 }

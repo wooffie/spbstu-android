@@ -1,25 +1,23 @@
 package com.wooftown.startactivityforresult
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import com.wooftown.startactivityforresult.databinding.FirstActivityBinding
+import com.wooftown.startactivityforresult.databinding.Fragment1Binding
 
 // adb shell dumpsys activity activities | grep startactivityforresult | grep Hist
-class FirstActivity : OptionedActivity() {
 
-    private lateinit var binging: FirstActivityBinding
+class MainActivity : OptionedActivity() {
+
+    private lateinit var binging: Fragment1Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binging = FirstActivityBinding.inflate(layoutInflater)
+        binging = Fragment1Binding.inflate(layoutInflater)
         setContentView(binging.root)
-        binging.toSecond.setOnClickListener { toSecond() }
+        binging.bnToSecond.setOnClickListener { toSecond() }
 
     }
+
 
     private fun toSecond() {
         startActivity(Intent(this, SecondActivity::class.java))

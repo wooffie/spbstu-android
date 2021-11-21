@@ -1,26 +1,25 @@
 package com.wooftown.startactivityforresult
 
 import android.app.Activity
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import com.wooftown.startactivityforresult.databinding.ThirdActivityBinding
+import com.wooftown.startactivityforresult.databinding.Fragment3Binding
+
 
 class ThirdActivity : OptionedActivity() {
 
 
-    private lateinit var binging: ThirdActivityBinding
+    private lateinit var binging: Fragment3Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binging = ThirdActivityBinding.inflate(layoutInflater)
+        binging = Fragment3Binding.inflate(layoutInflater)
         setContentView(binging.root)
-        binging.toFirst.setOnClickListener { toFirst() }
-        binging.toSecond.setOnClickListener { toSecond() }
+        binging.bnToFirst.setOnClickListener { toFirst() }
+        binging.bnToSecond.setOnClickListener { toSecond() }
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
+
 
     private fun toFirst() {
         this.setResult(Activity.RESULT_OK)

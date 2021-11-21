@@ -2,6 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <item
     android:id="@+id/about_item"
-    android:title="@string/about_tittle"
+    android:title="@string/title_about"
     />
 </menu>

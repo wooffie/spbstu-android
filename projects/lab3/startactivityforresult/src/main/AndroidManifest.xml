@@ -10,13 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StartActivityForResult">
         <activity
-            android:name=".SecondActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ThirdActivity"
-            android:exported="true" />
-        <activity
-            android:name=".FirstActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,8 +19,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AboutActivity"
-            android:exported="true" />
+            android:name=".SecondActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ThirdActivity"
+            android:parentActivityName=".SecondActivity" />
+        <activity android:name=".AboutActivity" />
 
     </application>
 

@@ -1,54 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/firstFragment">
-
-    <fragment
-        android:id="@+id/firstFragment"
-        android:name="com.wooftown.navigation.FirstFragment"
-        android:label="fragment_first"
-        tools:layout="@layout/fragment_first">
-        <action
-            android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.wooftown.navigation.SecondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second">
-        <action
-            android:id="@+id/action_secondFragment_to_firstFragment"
-            app:destination="@id/firstFragment"
-            app:popUpTo="@id/firstFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_secondFragment_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/thirdFragment"
-        android:name="com.wooftown.navigation.ThirdFragment"
-        android:label="ThirdFragment">
-        <action
-            android:id="@+id/action_thirdFragment_to_secondFragment"
-            app:destination="@id/secondFragment"
-            app:popUpTo="@id/secondFragment"
-            app:popUpToInclusive="true"
-            />
-        <action
-            android:id="@+id/action_thirdFragment_to_firstFragment"
-            app:destination="@id/firstFragment"
-            app:popUpTo="@id/firstFragment"
-            app:popUpToInclusive="true" />
-    </fragment>
-    <action android:id="@+id/global_about"
-        app:destination="@id/aboutActivity"/>
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragment1">
 
     <activity
         android:id="@+id/aboutActivity"
         android:name="com.wooftown.navigation.AboutActivity"
-        android:label="AboutActivity" />
+        android:label="AboutActivity"
+        app:action="@+id/action_about" />
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.wooftown.navigation.Fragment1"
+        android:label="Fragment1" >
+        <action
+            android:id="@+id/action_to2"
+            app:destination="@id/fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.wooftown.navigation.Fragment2"
+        android:label="Fragment2" >
+        <action
+            android:id="@+id/action_to3"
+            app:destination="@id/fragment3" />
+        <action
+            android:id="@+id/action_to1"
+            app:popUpTo="@id/fragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.wooftown.navigation.Fragment3"
+        android:label="Fragment3" >
+        <action
+            android:id="@+id/action_to2"
+            app:popUpTo="@id/fragment2" />
+        <action
+            android:id="@+id/action_to1"
+            app:popUpTo="@id/fragment1"
+            />
+    </fragment>
 </navigation>

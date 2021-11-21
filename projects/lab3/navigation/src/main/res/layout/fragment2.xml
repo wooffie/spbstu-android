@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/teal_200"
-    tools:context=".FirstActivity">
+    android:id="@+id/fragment2"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/activity_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/this_is_second_activity"
+        android:text="@string/this_is_second_fragment"
         android:textColor="@color/purple_700"
         android:textSize="30sp"
 
@@ -20,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/toFirst"
+        android:id="@+id/bnToFirst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -33,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@id/activity_name" />
 
     <Button
-        android:id="@+id/toThird"
+        android:id="@+id/bnToThird"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -43,6 +44,6 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toFirst" />
+        app:layout_constraintTop_toBottomOf="@id/bnToFirst" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

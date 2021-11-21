@@ -7,16 +7,25 @@
         <entry key="..\:/projects/spbstu-android/projects/lab3/app/src/main/res/layout/activity_main.xml" value="0.2717391304347826" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/app/src/main/res/menu/options_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/intentflagsactivityattributes/src/main/res/layout/about_activity.xml" value="0.25" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/intentflagsactivityattributes/src/main/res/layout/activity_about.xml" value="0.20520833333333333" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/intentflagsactivityattributes/src/main/res/layout/first_activity.xml" value="0.17831813576494426" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/intentflagsactivityattributes/src/main/res/layout/fragment1.xml" value="0.24635416666666668" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/intentflagsactivityattributes/src/main/res/layout/fragment2.xml" value="0.20520833333333333" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/intentflagsactivityattributes/src/main/res/layout/second_activity.xml" value="0.17831813576494426" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/intentflagsactivityattributes/src/main/res/menu/option_menu.xml" value="0.36102564102564105" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/intentflagsactivityattributes/src/main/res/menu/options_menu.xml" value="0.20520833333333333" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/drawable/ic_launcher_background.xml" value="0.19074074074074074" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/layout/about_activity.xml" value="0.24583333333333332" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/layout/activity_about.xml" value="0.20520833333333333" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/layout/fragment1.xml" value="0.225" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/layout/fragment2.xml" value="0.15416666666666667" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/layout/fragment3.xml" value="0.20520833333333333" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/layout/fragment_first.xml" value="0.1" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/layout/fragment_second.xml" value="0.1724137931034483" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/layout/fragment_third.xml" value="0.21770833333333334" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/menu/menu.xml" value="0.22552083333333334" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/navigation/src/main/res/menu/option_menu.xml" value="0.225" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/navigationgraph/src/main/res/drawable/ic_launcher_background.xml" value="0.24814814814814815" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/navigationgraph/src/main/res/layout/about_activity.xml" value="0.17831813576494426" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/navigationgraph/src/main/res/layout/first_activity.xml" value="0.17831813576494426" />
@@ -32,8 +41,11 @@
         <entry key="..\:/projects/spbstu-android/projects/lab3/startactivityforresult/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.33179487179487177" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/startactivityforresult/src/main/res/drawable/ic_launcher_background.xml" value="0.33179487179487177" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/startactivityforresult/src/main/res/layout/about_activity.xml" value="0.33" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/startactivityforresult/src/main/res/layout/activity_about.xml" value="0.36666666666666664" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/startactivityforresult/src/main/res/layout/activity_second.xml" value="0.32083333333333336" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/startactivityforresult/src/main/res/layout/first_activity.xml" value="0.1912568306010929" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/startactivityforresult/src/main/res/layout/fragment2.xml" value="0.36666666666666664" />
+        <entry key="..\:/projects/spbstu-android/projects/lab3/startactivityforresult/src/main/res/layout/fragment3.xml" value="0.36666666666666664" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/startactivityforresult/src/main/res/layout/second_activity.xml" value="0.19662921348314608" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/startactivityforresult/src/main/res/layout/third_activity.xml" value="0.32083333333333336" />
         <entry key="..\:/projects/spbstu-android/projects/lab3/startactivityforresult/src/main/res/menu/options_menu.xml" value="0.36102564102564105" />
