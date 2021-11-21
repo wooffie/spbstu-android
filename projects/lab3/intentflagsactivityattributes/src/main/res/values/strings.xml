@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Intent Flags Activity Attributes</string>
+    <string name="app_name">Start Activity For Result</string>
     <string name="about_text">\"I always tell the truth. Even when I lie.\"</string>
-    <string name="about_tittle">About…</string>
+    <string name="about_tittle">About...</string>
     <string name="tony_montana">Tony Montana</string>
     <string name="this_is_first_activity">This is first activity!</string>
     <string name="go_to_second">Go to second</string>
@@ -9,4 +9,5 @@
     <string name="this_is_second_activity">This is second activity</string>
     <string name="go_to_third">Go to third</string>
     <string name="this_is_third_activity">This is third activity</string>
+    <string name="title_about">About</string>
 </resources>

@@ -11,6 +11,7 @@
         android:theme="@style/Theme.ThirdLab">
         <activity
             android:name=".MainActivity"
+            android:launchMode="singleTop"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +21,8 @@
         </activity>
         <activity
             android:name=".AboutActivity"
-            android:exported="true"/>
+            android:parentActivityName=".MainActivity"
+            />
     </application>
 
 </manifest>

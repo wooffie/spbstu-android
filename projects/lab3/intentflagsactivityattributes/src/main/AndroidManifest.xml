@@ -11,7 +11,7 @@
         android:theme="@style/Theme.StartActivityForResult">
 
         <activity
-            android:name=".FirstActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,15 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".AboutActivity"
-            android:exported="true" />
+        <activity android:name=".AboutActivity" />
         <activity
             android:name=".SecondActivity"
-            android:exported="true" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ThirdActivity"
-            android:exported="true" />
+            android:parentActivityName=".SecondActivity" />
     </application>
 
 </manifest>
