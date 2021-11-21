@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.TextView
 import dev.wooftown.continuewatch.databinding.ActivityMainBinding
 
-
+// adb shell top -h
 class MainActivity : AppCompatActivity() {
 
     private var secondsElapsed: Int = 0
