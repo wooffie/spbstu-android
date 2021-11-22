@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.lifecycle.whenResumed
 import dev.wooftown.appcoroutines.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
 
@@ -22,14 +23,12 @@ class MainActivity : AppCompatActivity() {
         textSecondsElapsed = binding.SecondsElapsed
         setContentView(binding.root)
 
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                while (true) {
-                    Log.d(TAG, "Coroutine works")
-                    delay(1000)
-                    textSecondsElapsed.post {
-                        textSecondsElapsed.text = "${secondsElapsed++}"
-                    }
+        lifecycleScope.launchWhenResumed {
+            while (isActive) {
+                Log.d(TAG, "Coroutine works")
+                delay(1000)
+                textSecondsElapsed.post {
+                    textSecondsElapsed.text = "${secondsElapsed++}"
                 }
             }
         }
