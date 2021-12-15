@@ -20,6 +20,7 @@ class SecondActivity : OptionedActivity() {
         setContentView(binging.root)
         binging.bnToFirst.setOnClickListener { toFirst() }
         binging.bnToThird.setOnClickListener { toThird() }
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 

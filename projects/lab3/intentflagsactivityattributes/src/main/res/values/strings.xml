@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Start Activity For Result</string>
+    <string name="app_name">Intent Flags</string>
     <string name="about_text">\"I always tell the truth. Even when I lie.\"</string>
     <string name="about_tittle">About...</string>
     <string name="tony_montana">Tony Montana</string>

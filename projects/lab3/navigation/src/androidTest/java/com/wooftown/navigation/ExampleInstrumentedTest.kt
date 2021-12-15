@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.wooftown.intentflagsactivityattributes", appContext.packageName)
+        assertEquals("com.wooftown.navigation", appContext.packageName)
     }
 }

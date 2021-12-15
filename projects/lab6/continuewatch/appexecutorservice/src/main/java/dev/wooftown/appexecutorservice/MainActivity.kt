@@ -5,17 +5,24 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import dev.wooftown.appexecutorservice.databinding.ActivityMainBinding
-import java.lang.Exception
-import java.util.concurrent.Executor
 import java.util.concurrent.ExecutorService
-import java.util.concurrent.Executors
 import java.util.concurrent.Future
 
 class MainActivity : AppCompatActivity() {
 
     private var secondsElapsed: Int = 0
     private lateinit var textSecondsElapsed: TextView
-    private lateinit var executorService: ExecutorService
+    private lateinit var backgroundFuture: Future<*>
+
+    private fun submitBackground(executorService: ExecutorService) = executorService.submit {
+        while (!executorService.isShutdown) {
+            Log.d(TAG, "${Thread.currentThread()} is iterating")
+            Thread.sleep(1000)
+            textSecondsElapsed.post {
+                textSecondsElapsed.text = "${secondsElapsed++}"
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,22 +32,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onStart() {
-        executorService = Executors.newSingleThreadExecutor()
-        executorService.execute {
-            while (!executorService.isShutdown) {
-                Log.d(TAG, "${Thread.currentThread()} is iterating")
-                Thread.sleep(1000)
-                textSecondsElapsed.post {
-                    textSecondsElapsed.text = "${secondsElapsed++}"
-                }
-            }
-        }
         super.onStart()
+        backgroundFuture = submitBackground((applicationContext as MyApplication).watchPool)
     }
 
     override fun onStop() {
-        executorService.shutdown()
         super.onStop()
+        backgroundFuture.cancel(true)
     }
 
 

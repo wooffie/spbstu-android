@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.net.URL
 
 
@@ -21,13 +22,16 @@ class MainViewModel : ViewModel() {
             Log.d(TAG, "Sleeping 2sec")
             delay(2000)
             Log.d(TAG, "Downloading in ${Thread.currentThread()}")
-            bitmap.postValue(BitmapFactory.decodeStream(url.openConnection().getInputStream()))
+            val pic = BitmapFactory.decodeStream(url.openConnection().getInputStream())
+            withContext(Dispatchers.Main){
+                bitmap.value = pic
+            }
         }
 
     }
 
     companion object {
-        const val TAG = "ExecutorService"
+        const val TAG = "Coroutines"
     }
 
 }
