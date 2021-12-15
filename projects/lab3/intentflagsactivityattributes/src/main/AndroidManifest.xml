@@ -11,6 +11,7 @@
         android:theme="@style/Theme.StartActivityForResult">
 
         <activity
+            android:launchMode="singleTop"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

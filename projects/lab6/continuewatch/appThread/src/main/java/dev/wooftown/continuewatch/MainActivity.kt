@@ -12,23 +12,26 @@ class MainActivity : AppCompatActivity() {
     private var secondsElapsed: Int = 0
     private lateinit var textSecondsElapsed: TextView
 
-    private var backgroundThread = Thread {
-        while (!Thread.currentThread().isInterrupted) {
-            Log.d(TAG, "${Thread.currentThread()} is iterating")
-            try {
+    private lateinit var backgroundThread: Thread
+
+    private fun createNewThread() = Thread {
+        try {
+            while (!Thread.currentThread().isInterrupted) {
+                Log.d(TAG, "${Thread.currentThread()} is iterating")
                 Thread.sleep(1000)
                 textSecondsElapsed.post {
                     textSecondsElapsed.text = "${secondsElapsed++}"
                 }
-            } catch (e: InterruptedException) {
-                Thread.currentThread().interrupt()
             }
-
+        } catch (e: InterruptedException) {
+            Log.d(TAG, "${Thread.currentThread()} went catch block")
         }
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val binding = ActivityMainBinding.inflate(layoutInflater)
         textSecondsElapsed = binding.SecondsElapsed
         setContentView(binding.root)
@@ -36,20 +39,28 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        Log.d("TAG", "onStart()")
+
+        backgroundThread = createNewThread()
         backgroundThread.start()
+        Log.d("TAG", "${backgroundThread.id}")
+
     }
 
     override fun onStop() {
         super.onStop()
+        Log.d("TAG", "onStop()")
+
         backgroundThread.interrupt()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
         outState.run {
             Log.d(TAG, "Saving state SEC=$secondsElapsed")
             putInt(SEC, secondsElapsed)
         }
-        super.onSaveInstanceState(outState)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {

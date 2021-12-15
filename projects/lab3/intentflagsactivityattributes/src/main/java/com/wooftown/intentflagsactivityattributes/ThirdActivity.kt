@@ -21,6 +21,7 @@ class ThirdActivity : OptionedActivity() {
     }
 
     private fun toFirst() {
+        // val intent = Intent(this, MainActivity::class.java).addFlags(FLAG_ACTIVITY_CLEAR_TOP)
         val intent = Intent(this, MainActivity::class.java).addFlags(FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
