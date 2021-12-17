@@ -25,9 +25,7 @@ class MainActivity : AppCompatActivity() {
             while (isActive) {
                 Log.d(TAG, "Coroutine works")
                 delay(1000)
-                textSecondsElapsed.post {
-                    textSecondsElapsed.text = "${secondsElapsed++}"
-                }
+                textSecondsElapsed.text = "${secondsElapsed++}"
             }
         }
 
