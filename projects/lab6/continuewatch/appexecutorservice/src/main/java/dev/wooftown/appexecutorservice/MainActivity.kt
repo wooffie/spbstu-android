@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var backgroundFuture: Future<*>
 
     private fun submitBackground(executorService: ExecutorService) = executorService.submit {
-        while (!executorService.isShutdown) {
+        while (true) {
             Log.d(TAG, "${Thread.currentThread()} is iterating")
             Thread.sleep(1000)
             textSecondsElapsed.post {

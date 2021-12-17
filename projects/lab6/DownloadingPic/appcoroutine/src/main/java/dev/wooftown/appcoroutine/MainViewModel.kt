@@ -19,12 +19,14 @@ class MainViewModel : ViewModel() {
 
     fun downloadImage(url: URL) {
         viewModelScope.launch(Dispatchers.IO) {
-            Log.d(TAG, "Sleeping 2sec")
+            Log.d(TAG, "Sleeping 2sec") // Dispatchers.IO (main-safety block) \
             delay(2000)
             Log.d(TAG, "Downloading in ${Thread.currentThread()}")
-            val pic = BitmapFactory.decodeStream(url.openConnection().getInputStream())
-            withContext(Dispatchers.Main){
-                bitmap.value = pic
+            val pic = BitmapFactory.decodeStream(
+                url.openConnection().getInputStream()
+            )  // Dispatchers.IO (main-safety block) /
+            withContext(Dispatchers.Main) { // Dispatchers.Main
+                bitmap.value = pic          // Dispatchers.Main
             }
         }
 
