@@ -6,7 +6,7 @@
 - [x] 2. Activity Lifecycle. Alternative resources.
 - [x] 3. Lifecycle components. Navigation in the application. 
 - [x] 4. UI Tests. 
-- [ ] 6. Multithreaded Android apps. 
+- [x] 6. Multithreaded Android apps. 
 
 
        
